@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio Hospital</title>
+    <script src="js/modelo.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Listado de pacientes</h1>
+        <form action="send.html">
+
+            <b>Edad mínima : </b><select id="edadMin" name="edad mínima"></select>
+            <b>Edad máxima : </b><select id="edadMax" name="edad máxima"></select>
+
+            <input id="recoger" type="submit" value="Filtrar por edad">
+            <button id="limpiar" type="button" value="Limpiar búsqueda">Limpiar búsqueda</button><br>
+
+            <select name="diagnostico" id="diagnosticoPaciente" onChange="recogerDiagnostico()">
+                <option selected value="">Selecciona un diagnóstico</option>
+                <option value="gripe">Gripe</option>
+                <option value="hernia">Hernia</option>
+                <option value="esguince">Esguince</option>
+                <option value="jaqueca">Jaqueca</option>
+                <option value="sinusitis">Sinusitis</option>
+                <option value="acné">Acné</option>
+                <option value="vértigo">Vértigo</option>
+                <option value="contractura">Contractura</option>
+                <option value="rotura">Rotura</option>
+                <option value="baricela">Baricela</option>
+                <option value="tumor">Tumor</option>
+                <option value="asma">Asma</option>
+                <option value="catarro">Catarro</option>
+            </select><br>
+
+            <input id="apellido" type="text" placeholder="Introduce el apellido">
+            <input id="recogerApellido" type="submit" value="Filtrar por apellido">
+
+        </form>
+
+    </header>
+    <section>
+        <ul id="lista"></ul>
+    </section>
+
+
+</body>
+    
+    <script src="js/index.js"></script>
+
+</html>
